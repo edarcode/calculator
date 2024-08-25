@@ -1,0 +1,37 @@
+.label {
+	position: relative;
+}
+
+.input {
+	width: 100%;
+	border: 2px solid transparent;
+	border-radius: var(--sm);
+	padding: var(--sm) var(--md);
+	min-height: 32px;
+	outline: transparent;
+}
+
+.input:focus {
+	box-shadow: var(--s-sm);
+}
+
+.input::placeholder {
+	color: gray;
+	font-size: 0.9em;
+}
+
+.input__err {
+	border: 2px solid red;
+}
+
+.input__state {
+	padding-right: calc(var(--md) + 20px);
+}
+.primary {
+	background-color: #2c2c2e;
+	color: whitesmoke;
+}
+
+.secondary {
+	color: black;
+}
