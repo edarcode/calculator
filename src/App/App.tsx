@@ -11,6 +11,7 @@ function App() {
 
 	const calculate = (e: FormEvent) => {
 		e.preventDefault();
+
 		let currentNum = "";
 		let oldNum = "";
 		let operator = "";
@@ -18,7 +19,11 @@ function App() {
 
 		for (let i = 0; i < req.length; i++) {
 			const item = req[i];
+
+			console.log(item);
+
 			if (typeof item == "number") {
+				console.log(item);
 				currentNum += item;
 			} else {
 				oldNum = currentNum;
@@ -26,7 +31,12 @@ function App() {
 				operator = item;
 			}
 
-			if (currentNum && oldNum && operator) {
+			if (
+				currentNum &&
+				oldNum &&
+				operator &&
+				!(typeof req[i + 1] == "number")
+			) {
 				if (operator === "+") {
 					result = sum(Number(oldNum), Number(currentNum));
 				} else if (operator === "*") {
@@ -36,7 +46,10 @@ function App() {
 				} else {
 					result = subtract(Number(oldNum), Number(currentNum));
 				}
+
 				currentNum = `${result}`;
+				oldNum = "";
+				operator = "";
 			}
 		}
 
