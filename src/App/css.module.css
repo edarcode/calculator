@@ -1,12 +1,1 @@
-.app {
-	padding: 10px;
-	justify-content: start;
-}
 
-.form {
-	width: 150px;
-	display: grid;
-	gap: var(--sm);
-	grid-template-columns: repeat(4, 1fr);
-	justify-items: start;
-}

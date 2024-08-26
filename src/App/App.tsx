@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Btn from "../components/Btn/Btn";
 import css from "./css.module.css";
 import { FormEvent } from "../types";
 import { getResult } from "./getResult";
@@ -34,32 +33,27 @@ export default function App() {
 	};
 
 	const btns = [...NUMBERS, ...OPERATORS].map(btn => (
-		<Btn
-			type="button"
-			kind="secondary"
-			key={btn.value}
-			onClick={() => changeReq(btn.value)}
-		>
+		<button type="button" key={btn.value} onClick={() => changeReq(btn.value)}>
 			{btn.display}
-		</Btn>
+		</button>
 	));
 
 	return (
 		<div className={css.app}>
-			<div>{req.join(" ")}</div>
+			<div className={css.req}>{req.join(" ")}</div>
 			<div className={css.result}>{result}</div>
 			<form className={css.form} onSubmit={calculate}>
 				{btns}
 
-				<Btn type="button" onClick={deleteOneReq}>
+				<button type="button" onClick={deleteOneReq}>
 					B
-				</Btn>
+				</button>
 
-				<Btn type="button" onClick={cleanAll}>
+				<button type="button" onClick={cleanAll}>
 					L
-				</Btn>
+				</button>
 
-				<Btn>=</Btn>
+				<button>=</button>
 			</form>
 		</div>
 	);
