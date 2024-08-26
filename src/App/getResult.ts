@@ -43,5 +43,6 @@ export const getResult = (req: Req) => {
 		}
 	}
 
-	return result;
+	const userLocale = navigator.language || "en-US";
+	return result.toLocaleString(userLocale);
 };

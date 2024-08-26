@@ -8,7 +8,7 @@ const initReq: Req = [];
 export type Req = (string | number)[];
 
 export default function App() {
-	const [result, setResult] = useState(0);
+	const [result, setResult] = useState("0");
 	const [req, setReq] = useState(initReq);
 
 	const calculate = (e: FormEvent) => {
@@ -28,7 +28,7 @@ export default function App() {
 	};
 
 	const cleanAll = () => {
-		setResult(0);
+		setResult("0");
 		setReq([]);
 	};
 
