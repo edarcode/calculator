@@ -72,6 +72,15 @@ function App() {
 				>
 					B
 				</Btn>
+				<Btn
+					type="button"
+					onClick={() => {
+						setResult(0);
+						setReq([]);
+					}}
+				>
+					L
+				</Btn>
 				{[...NUMBERS, ...OPERATORS].map(btn => (
 					<Btn
 						type="button"
