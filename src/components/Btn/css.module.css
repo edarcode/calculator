@@ -11,11 +11,10 @@
 	border: 2px solid transparent;
 	padding: var(--sm) var(--md);
 	cursor: pointer;
-	min-width: 125px;
-	min-height: 32px;
 	border-radius: var(--md);
 	display: grid;
 	place-items: center;
+	min-width: 29px;
 }
 
 .btn__err {
