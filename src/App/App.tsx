@@ -40,20 +40,22 @@ export default function App() {
 
 	return (
 		<div className={css.app}>
-			<div className={css.req}>{req.join(" ")}</div>
-			<div className={css.result}>{result}</div>
+			<section className={css.viewfinder}>
+				<div className={css.req}>▸ {req.join(" ")}</div>
+				<div className={css.result}>{result}</div>
+			</section>
 			<form className={css.form} onSubmit={calculate}>
 				{btns}
 
 				<button type="button" onClick={deleteOneReq}>
-					B
+					Borrar
 				</button>
 
 				<button type="button" onClick={cleanAll}>
-					L
+					Limpiar
 				</button>
 
-				<button>=</button>
+				<button>🟰</button>
 			</form>
 		</div>
 	);
