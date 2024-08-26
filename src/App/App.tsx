@@ -20,10 +20,7 @@ function App() {
 		for (let i = 0; i < req.length; i++) {
 			const item = req[i];
 
-			console.log(item);
-
-			if (typeof item == "number") {
-				console.log(item);
+			if (typeof item == "number" || item == ".") {
 				currentNum += item;
 			} else {
 				oldNum = currentNum;
@@ -35,7 +32,7 @@ function App() {
 				currentNum &&
 				oldNum &&
 				operator &&
-				!(typeof req[i + 1] == "number")
+				!(typeof req[i + 1] == "number" || req[i + 1] == ".")
 			) {
 				if (operator === "+") {
 					result = sum(Number(oldNum), Number(currentNum));
