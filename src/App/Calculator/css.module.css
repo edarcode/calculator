@@ -1,6 +1,5 @@
 .calc {
 	display: grid;
-	justify-content: center;
 	width: 250px;
 	background-color: var(--bg-surf);
 	padding: var(--md);
@@ -20,4 +19,90 @@
 
 .result {
 	font-size: 2.5rem;
+}
+
+.form {
+	padding-top: var(--md);
+	display: grid;
+	gap: var(--lg);
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas:
+		"ab al an div"
+		"a1 a2 a3 sum"
+		"a4 a5 a6 sub"
+		"a7 a8 a9 mul"
+		"a0 a0 ap equ";
+}
+
+.b {
+	grid-area: ab;
+}
+
+.l {
+	grid-area: al;
+}
+
+.sum {
+	grid-area: sum;
+}
+
+.sub {
+	grid-area: sub;
+}
+
+.mul {
+	grid-area: mul;
+}
+
+.div {
+	grid-area: div;
+}
+
+.equ {
+	grid-area: equ;
+}
+
+.a1 {
+	grid-area: a1;
+}
+
+.a2 {
+	grid-area: a2;
+}
+
+.a3 {
+	grid-area: a3;
+}
+
+.a4 {
+	grid-area: a4;
+}
+
+.a5 {
+	grid-area: a5;
+}
+
+.a6 {
+	grid-area: a6;
+}
+
+.a7 {
+	grid-area: a7;
+}
+
+.a8 {
+	grid-area: a8;
+}
+
+.a9 {
+	grid-area: a9;
+}
+
+.a0 {
+	grid-area: a0;
+}
+
+.ap {
+	grid-area: ap;
 }

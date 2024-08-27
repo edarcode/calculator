@@ -32,11 +32,32 @@ export default function Calculator() {
 		setReq([]);
 	};
 
-	const btns = [...NUMBERS, ...OPERATORS].map(btn => (
-		<button type="button" key={btn.value} onClick={() => changeReq(btn.value)}>
-			{btn.display}
-		</button>
-	));
+	const numbers = NUMBERS.map(btn => {
+		return (
+			<button
+				type="button"
+				key={btn.value}
+				className={css[btn.class]}
+				onClick={() => changeReq(btn.value)}
+			>
+				{btn.display}
+			</button>
+		);
+	});
+
+	const operators = OPERATORS.map(btn => {
+		return (
+			<button
+				type="button"
+				key={btn.value}
+				className={css[btn.class]}
+				onClick={() => changeReq(btn.value)}
+			>
+				{btn.display}
+			</button>
+		);
+	});
+
 	return (
 		<main className={css.calc}>
 			<section className={css.viewfinder}>
@@ -44,17 +65,18 @@ export default function Calculator() {
 				<div className={css.result}>{result}</div>
 			</section>
 			<form className={css.form} onSubmit={calculate}>
-				{btns}
+				{numbers}
 
-				<button type="button" onClick={deleteOneReq}>
-					Borrar
+				{operators}
+				<button className={css.equ}>🟰</button>
+
+				<button type="button" className={css.b} onClick={deleteOneReq}>
+					B
 				</button>
 
-				<button type="button" onClick={cleanAll}>
-					Limpiar
+				<button type="button" className={css.l} onClick={cleanAll}>
+					L
 				</button>
-
-				<button>🟰</button>
 			</form>
 		</main>
 	);
