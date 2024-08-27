@@ -29,9 +29,9 @@
 	grid-template-rows: repeat(5, auto);
 	grid-template-areas:
 		"ab al an div"
-		"a1 a2 a3 sum"
+		"a7 a8 a9 sum"
 		"a4 a5 a6 sub"
-		"a7 a8 a9 mul"
+		"a1 a2 a3 mul"
 		"a0 a0 ap equ";
 }
 
