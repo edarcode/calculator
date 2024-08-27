@@ -1,8 +1,8 @@
-import { multiply } from "../utils/multiply";
-import { split } from "../utils/split";
-import { subtract } from "../utils/subtract";
-import { sum } from "../utils/sum";
-import { Req } from "./App";
+import { multiply } from "../../utils/multiply";
+import { split } from "../../utils/split";
+import { subtract } from "../../utils/subtract";
+import { sum } from "../../utils/sum";
+import { Req } from "./Calculator";
 
 export const getResult = (req: Req) => {
 	let currentNum = "";

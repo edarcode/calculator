@@ -1,3 +1,7 @@
-.app {
+.calc {
 	padding: var(--md);
+	display: grid;
+	justify-content: center;
+	width: 250px;
+	background-color: var(--bg-surf);
 }

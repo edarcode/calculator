@@ -7,7 +7,7 @@
 
 body {
 	background-color: var(--bg-main);
-	color: var(--t-sec);
+	color: var(--t-main);
 }
 
 @media (prefers-color-scheme: light) {
