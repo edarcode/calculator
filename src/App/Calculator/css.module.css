@@ -2,7 +2,12 @@
 	display: grid;
 	width: 250px;
 	background-color: var(--bg-surf);
-	padding: var(--md);
+	padding: var(--lg);
+}
+
+.calc,
+.viewfinder {
+	border-radius: var(--xs);
 }
 
 .viewfinder {
@@ -19,20 +24,21 @@
 
 .result {
 	font-size: 2.5rem;
+	margin-left: auto;
 }
 
 .form {
-	padding-top: var(--md);
+	padding-top: var(--lg);
 	display: grid;
 	gap: var(--lg);
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(5, auto);
 	grid-template-areas:
-		"ab al an div"
+		"al an ab div"
 		"a7 a8 a9 sum"
 		"a4 a5 a6 sub"
 		"a1 a2 a3 mul"
-		"a0 a0 ap equ";
+		"no a0 ap equ";
 }
 
 .b {
@@ -57,6 +63,15 @@
 
 .div {
 	grid-area: div;
+}
+
+.sum,
+.sub,
+.mul,
+.div,
+.b,
+.ap {
+	color: var(--pri);
 }
 
 .equ {
@@ -105,4 +120,10 @@
 
 .ap {
 	grid-area: ap;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	color: var(--sec);
 }

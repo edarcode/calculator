@@ -61,22 +61,19 @@ export default function Calculator() {
 	return (
 		<main className={css.calc}>
 			<section className={css.viewfinder}>
-				<div className={css.req}>▸ {req.join(" ")}</div>
+				<div className={css.req}>✏️ {req.join(" ")}</div>
 				<div className={css.result}>{result}</div>
 			</section>
 			<form className={css.form} onSubmit={calculate}>
-				{numbers}
-
-				{operators}
-				<button className={css.equ}>🟰</button>
-
+				<button type="button" className={css.l} onClick={cleanAll}>
+					🗑️
+				</button>
 				<button type="button" className={css.b} onClick={deleteOneReq}>
 					B
 				</button>
-
-				<button type="button" className={css.l} onClick={cleanAll}>
-					L
-				</button>
+				{numbers}
+				{operators}
+				<button className={css.equ}>🟰</button>
 			</form>
 		</main>
 	);
