@@ -41,8 +41,9 @@
 		"no a0 ap equ";
 }
 
-.b {
+button.b {
 	grid-area: ab;
+	font-size: 2.1rem;
 }
 
 .l {
@@ -72,6 +73,7 @@
 .b,
 .ap {
 	color: var(--pri);
+	font-size: 1.6rem;
 }
 
 .equ {

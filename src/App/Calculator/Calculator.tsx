@@ -69,7 +69,7 @@ export default function Calculator() {
 					🗑️
 				</button>
 				<button type="button" className={css.b} onClick={deleteOneReq}>
-					B
+					⤺
 				</button>
 				{numbers}
 				{operators}
