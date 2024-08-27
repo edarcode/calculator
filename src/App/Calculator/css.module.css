@@ -1,0 +1,23 @@
+.calc {
+	display: grid;
+	justify-content: center;
+	width: 250px;
+	background-color: var(--bg-surf);
+	padding: var(--md);
+}
+
+.viewfinder {
+	background-color: var(--sec);
+	color: var(--bg-main);
+	padding: var(--lg);
+	display: grid;
+	gap: var(--lg);
+}
+
+.req {
+	font-size: 1.5rem;
+}
+
+.result {
+	font-size: 2.5rem;
+}

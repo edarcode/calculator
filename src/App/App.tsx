@@ -3,7 +3,7 @@ import Calculator from "./Calculator/Calculator";
 
 export default function App() {
 	return (
-		<div className={css.calc}>
+		<div className={css.app}>
 			<Calculator />
 		</div>
 	);

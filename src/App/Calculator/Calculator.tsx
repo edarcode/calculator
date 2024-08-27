@@ -38,7 +38,7 @@ export default function Calculator() {
 		</button>
 	));
 	return (
-		<main>
+		<main className={css.calc}>
 			<section className={css.viewfinder}>
 				<div className={css.req}>▸ {req.join(" ")}</div>
 				<div className={css.result}>{result}</div>
