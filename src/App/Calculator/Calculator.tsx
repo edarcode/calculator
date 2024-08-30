@@ -73,7 +73,7 @@ export default function Calculator() {
 				</button>
 				{numbers}
 				{operators}
-				<button className={css.equ}>🟰</button>
+				<button className={css.equ}>=</button>
 			</form>
 		</main>
 	);
